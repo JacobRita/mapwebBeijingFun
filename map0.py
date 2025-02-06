@@ -7,13 +7,14 @@ Created on Wed Feb  5 16:12:13 2025
 
 from flask import Flask, render_template
 import folium
+from folium.plugins import MarkerCluster
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # 创建地图对象，中心点设为北京
-    m = folium.Map(location=[39.9042, 116.4074], zoom_start=12)
+    # Create map object with a lighter tile layer
+    m = folium.Map(location=[39.9042, 116.4074], zoom_start=12, tiles='Stamen Toner')
 
     # 添加标记点（景点）
     places = [
@@ -38,14 +39,16 @@ def index():
             "description": "长城是中国古代的军事防御工程，是世界文化遗产。"
         }
     ]
-
+	
+   # Optimize markers with clustering
+    marker_cluster = MarkerCluster().add_to(m)
     # 在地图上添加标记
     for place in places:
         folium.Marker(
             location=place["location"],
             popup=f"<b>{place['name']}</b><br>{place['description']}",
             tooltip=place["name"]
-        ).add_to(m)
+        ).add_to(marker_cluster)
 
     # 保存地图为 HTML 文件
     m.save('templates/map.html')
