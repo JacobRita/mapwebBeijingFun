@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b495393cd495698472bc0088d7589dc6 {
+                #map_84a491439315235bac0772d224a977f0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,18 +35,21 @@
                 .leaflet-container { font-size: 1rem; }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_b495393cd495698472bc0088d7589dc6" ></div>
+            <div class="folium-map" id="map_84a491439315235bac0772d224a977f0" ></div>
         
 </body>
 <script>
     
     
-            var map_b495393cd495698472bc0088d7589dc6 = L.map(
-                "map_b495393cd495698472bc0088d7589dc6",
+            var map_84a491439315235bac0772d224a977f0 = L.map(
+                "map_84a491439315235bac0772d224a977f0",
                 {
                     center: [39.9042, 116.4074],
                     crs: L.CRS.EPSG3857,
@@ -60,63 +63,40 @@
 
         
     
-            var tile_layer_1890abaab6c55faf2b7d82c32fd8fdf1 = L.tileLayer(
+            var tile_layer_2cec86c373b729ad1a7e2cc9c848b8ac = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_b495393cd495698472bc0088d7589dc6);
+            ).addTo(map_84a491439315235bac0772d224a977f0);
         
     
-            var marker_5daa7b50286a0c6e17efb1fde7774705 = L.marker(
-                [39.9163, 116.3972],
+            var marker_cluster_2cebf77c60895445abec8159100f5577 = L.markerClusterGroup(
                 {}
-            ).addTo(map_b495393cd495698472bc0088d7589dc6);
-        
-    
-        var popup_b2b7cc9455253021631d821b7e8f0479 = L.popup({"maxWidth": 300});
-
-        
-            
-                var html_9b1a0933e15930ef2509099ffbb9c863 = $(`<div id="html_9b1a0933e15930ef2509099ffbb9c863" style="width: 100.0%; height: 100.0%;">故宫是中国明清两代的皇家宫殿。</div>`)[0];
-                popup_b2b7cc9455253021631d821b7e8f0479.setContent(html_9b1a0933e15930ef2509099ffbb9c863);
-            
-        
-
-        marker_5daa7b50286a0c6e17efb1fde7774705.bindPopup(popup_b2b7cc9455253021631d821b7e8f0479)
-        ;
-
-        
-    
-    
-            marker_5daa7b50286a0c6e17efb1fde7774705.bindTooltip(
-                `<div>
-                     故宫
-                 </div>`,
-                {"sticky": true}
             );
+            map_84a491439315235bac0772d224a977f0.addLayer(marker_cluster_2cebf77c60895445abec8159100f5577);
         
     
-            var marker_69a784db7a61369c972ff0391c238bdf = L.marker(
-                [39.9042, 116.3975],
+            var marker_382c8684bdec1a8071cedb692563aded = L.marker(
+                [39.9037, 116.3975],
                 {}
-            ).addTo(map_b495393cd495698472bc0088d7589dc6);
+            ).addTo(marker_cluster_2cebf77c60895445abec8159100f5577);
         
     
-        var popup_f069a9dcc6aa5864838739c8d9d2178d = L.popup({"maxWidth": 300});
+        var popup_f1bfedc27262395f434c1205a7fb3b47 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_c20367d491c61760afd2807e446741a4 = $(`<div id="html_c20367d491c61760afd2807e446741a4" style="width: 100.0%; height: 100.0%;">天安门是中华人民共和国的象征。</div>`)[0];
-                popup_f069a9dcc6aa5864838739c8d9d2178d.setContent(html_c20367d491c61760afd2807e446741a4);
+                var html_dc30f00243602130975678d0d45bdcc5 = $(`<div id="html_dc30f00243602130975678d0d45bdcc5" style="width: 100.0%; height: 100.0%;"><b>天安门</b><br>天安门是北京的标志性建筑，位于北京市中心。</div>`)[0];
+                popup_f1bfedc27262395f434c1205a7fb3b47.setContent(html_dc30f00243602130975678d0d45bdcc5);
             
         
 
-        marker_69a784db7a61369c972ff0391c238bdf.bindPopup(popup_f069a9dcc6aa5864838739c8d9d2178d)
+        marker_382c8684bdec1a8071cedb692563aded.bindPopup(popup_f1bfedc27262395f434c1205a7fb3b47)
         ;
 
         
     
     
-            marker_69a784db7a61369c972ff0391c238bdf.bindTooltip(
+            marker_382c8684bdec1a8071cedb692563aded.bindTooltip(
                 `<div>
                      天安门
                  </div>`,
@@ -124,28 +104,57 @@
             );
         
     
-            var marker_010f02d185e9def66b35c3193e93f88a = L.marker(
-                [39.9997, 116.2754],
+            var marker_9d84db2676b0da6aa7673cd3d308fe42 = L.marker(
+                [39.9163, 116.3972],
                 {}
-            ).addTo(map_b495393cd495698472bc0088d7589dc6);
+            ).addTo(marker_cluster_2cebf77c60895445abec8159100f5577);
         
     
-        var popup_895418f0dd4b1036e6eb523aa845e5f1 = L.popup({"maxWidth": 300});
+        var popup_26617a0b02dbc17d0cf96e5a7a5514f8 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_0c30f0827b6387994656733f006e1b7f = $(`<div id="html_0c30f0827b6387994656733f006e1b7f" style="width: 100.0%; height: 100.0%;">颐和园是中国清朝时期皇家园林。</div>`)[0];
-                popup_895418f0dd4b1036e6eb523aa845e5f1.setContent(html_0c30f0827b6387994656733f006e1b7f);
+                var html_6605f77de186d35d161b4db9501d8cb8 = $(`<div id="html_6605f77de186d35d161b4db9501d8cb8" style="width: 100.0%; height: 100.0%;"><b>故宫</b><br>故宫是中国明清两代的皇家宫殿，现为故宫博物院。</div>`)[0];
+                popup_26617a0b02dbc17d0cf96e5a7a5514f8.setContent(html_6605f77de186d35d161b4db9501d8cb8);
             
         
 
-        marker_010f02d185e9def66b35c3193e93f88a.bindPopup(popup_895418f0dd4b1036e6eb523aa845e5f1)
+        marker_9d84db2676b0da6aa7673cd3d308fe42.bindPopup(popup_26617a0b02dbc17d0cf96e5a7a5514f8)
         ;
 
         
     
     
-            marker_010f02d185e9def66b35c3193e93f88a.bindTooltip(
+            marker_9d84db2676b0da6aa7673cd3d308fe42.bindTooltip(
+                `<div>
+                     故宫
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b636c422723906227352cde22af58a74 = L.marker(
+                [39.9997, 116.2754],
+                {}
+            ).addTo(marker_cluster_2cebf77c60895445abec8159100f5577);
+        
+    
+        var popup_9be915f8f8ab21ecf16fa361ac388742 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53a4102773ffd9d65ca215c17461084c = $(`<div id="html_53a4102773ffd9d65ca215c17461084c" style="width: 100.0%; height: 100.0%;"><b>颐和园</b><br>颐和园是中国清朝时期的皇家园林，以昆明湖和万寿山著称。</div>`)[0];
+                popup_9be915f8f8ab21ecf16fa361ac388742.setContent(html_53a4102773ffd9d65ca215c17461084c);
+            
+        
+
+        marker_b636c422723906227352cde22af58a74.bindPopup(popup_9be915f8f8ab21ecf16fa361ac388742)
+        ;
+
+        
+    
+    
+            marker_b636c422723906227352cde22af58a74.bindTooltip(
                 `<div>
                      颐和园
                  </div>`,
@@ -153,28 +162,28 @@
             );
         
     
-            var marker_e16e39f3e6d0fbf7591f49301968aa21 = L.marker(
+            var marker_d2c154f3441e0484ff156b23b9671f1f = L.marker(
                 [40.4319, 116.5704],
                 {}
-            ).addTo(map_b495393cd495698472bc0088d7589dc6);
+            ).addTo(marker_cluster_2cebf77c60895445abec8159100f5577);
         
     
-        var popup_746bf1ccf4277722a8eee4f6194ab08e = L.popup({"maxWidth": 300});
+        var popup_2668d34ffe0c03a36f8d4cfdc5f0b55b = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_07ba64136f6691e2d1b7551367b6e1db = $(`<div id="html_07ba64136f6691e2d1b7551367b6e1db" style="width: 100.0%; height: 100.0%;">长城是中国古代的军事防御工程。</div>`)[0];
-                popup_746bf1ccf4277722a8eee4f6194ab08e.setContent(html_07ba64136f6691e2d1b7551367b6e1db);
+                var html_780abb3e7df5df72a99fbce151022303 = $(`<div id="html_780abb3e7df5df72a99fbce151022303" style="width: 100.0%; height: 100.0%;"><b>长城</b><br>长城是中国古代的军事防御工程，是世界文化遗产。</div>`)[0];
+                popup_2668d34ffe0c03a36f8d4cfdc5f0b55b.setContent(html_780abb3e7df5df72a99fbce151022303);
             
         
 
-        marker_e16e39f3e6d0fbf7591f49301968aa21.bindPopup(popup_746bf1ccf4277722a8eee4f6194ab08e)
+        marker_d2c154f3441e0484ff156b23b9671f1f.bindPopup(popup_2668d34ffe0c03a36f8d4cfdc5f0b55b)
         ;
 
         
     
     
-            marker_e16e39f3e6d0fbf7591f49301968aa21.bindTooltip(
+            marker_d2c154f3441e0484ff156b23b9671f1f.bindTooltip(
                 `<div>
                      长城
                  </div>`,
